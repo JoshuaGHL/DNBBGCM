@@ -1,0 +1,121 @@
+/* General rules for all, body, and html */
+* {
+  box-sizing: border-box;
+  font-family: Georgia, Verdana, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+body, html {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove margin to eliminate spacing */
+}
+
+body {
+  display: block;
+  margin: 0; /* Remove any extra margin */
+}
+
+/* These are the rules for the banner that appears at the top of the page. */
+.daisy-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/daisybanner.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* This centers the table for the plant-pictures2008.html file because it didn't want to center otherwise. */
+table {
+  margin: 0 auto;
+}
+
+/* Rules for the container that the image links are in */
+#image_container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Rules for images inside container. Number of images in row will vary dependent on viewport size. */
+#image_container img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 20vw;
+  margin: 10px;
+  float: left;
+}
+
+#image_container img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Row & column CSS rules. Cards will go in their own rows if viewport is small. */
+.row {
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  width: 50%;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Header color. */
+h1 {
+  color: #012689;
+}
+
+/* Needed a red header too. */
+h2 {
+  color: crimson;
+}
+
+/* Rules for the cards. */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* This adds the "card" effect */
+  height: 500px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  overflow: auto;
+  transition: 0.3s;
+  border-radius: 25px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Footer CSS rules. */
+footer {
+  background: gray;
+  width: 100%;
+  position: relative;
+  margin: 0; /* Remove margin to eliminate space below footer */
+  text-align: center;
+  color: #ffffff;
+  z-index: 10;
+  padding: 10px 0; /* Optional: add padding for spacing inside the footer */
+}
